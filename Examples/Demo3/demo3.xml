@@ -1,0 +1,3 @@
+<UIView layout_edge="{5,5,-5,-5}" backgroundColor="@color:CD96CD">
+    <import name="external" />
+</UIView>

@@ -1,0 +1,4 @@
+<UIView layout_edge="{5,5,-5,-5}" backgroundColor="@color:CD96CD">
+    <UIImageView layout_id="image_view" layout_top="20" layout_centerX="" layout_left_right="{>=10,<=-10}" image="@img:demo" />
+    <UILabel layout_below="@id:image_view:20" layout_left_right="{10,-10}" layout_height="100" textAlignment="1" font="@font:bold:22" text="我设置了加粗字体"/>
+</UIView>

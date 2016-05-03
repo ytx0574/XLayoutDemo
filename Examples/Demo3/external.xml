@@ -1,0 +1,3 @@
+<UIView layout_edge="{5,5,-5,-5}" backgroundColor="@color:CD8162">
+    <UILabel layout_edge="{20,20,-20,-20}" layout_center="" textAlignment="1" text="我是引用的视图"/>
+</UIView>
