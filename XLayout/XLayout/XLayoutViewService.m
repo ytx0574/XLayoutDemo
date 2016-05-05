@@ -152,6 +152,10 @@ NSString *const XLAYOUT_COLLECTION_REUSABLE_VIEW_ID = @"XLAYOUT_COLLECTION_REUSA
         }
         if (target) {
             [self invocationWithTarget:target methodName:methodName argumentsObject:obj];
+        }else {
+            if (![key isEqualToString:@"layout_id"] && !([key isEqualToString:@"name"] && [element.tag isEqualToString:@"import"])) {
+                [NSException raise:@"Parse attribute error" format:@"Cannot parse attribute %@",key];
+            }
         }
     }];
     

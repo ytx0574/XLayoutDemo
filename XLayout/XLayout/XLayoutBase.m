@@ -56,7 +56,7 @@
     NSAssert1(self.view.superview, @"There (%@) is no parent view",self.view.layout_id);
 }
 
-- (NSArray *)parserParameterWithLayoutAttribute:(NSString *)layoutAttribute {
+- (NSArray *)parseParameterWithLayoutAttribute:(NSString *)layoutAttribute {
     NSRange r = [layoutAttribute rangeOfString:@"(^\\{.+,.+\\}$)|(^\\{.+,.+,.+,.+\\}$)" options:NSRegularExpressionSearch];
     NSArray *component = nil;
     if (r.location != NSNotFound && r.length != 0) {
@@ -241,28 +241,28 @@
 }
 
 - (void)setLayout_top_left:(NSString *)layout_top_left {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_top_left];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_top_left];
     [self setLayout_top:[attribute firstObject]];
     [self setLayout_left:[attribute lastObject]];
     _layout_top_left = layout_top_left;
 }
 
 - (void)setLayout_bottom_right:(NSString *)layout_bottom_right {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_bottom_right];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_bottom_right];
     [self setLayout_bottom:[attribute firstObject]];
     [self setLayout_right:[attribute lastObject]];
     _layout_bottom_right = layout_bottom_right;
 }
 
 - (void)setLayout_top_bottom:(NSString *)layout_top_bottom {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_top_bottom];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_top_bottom];
     [self setLayout_top:[attribute firstObject]];
     [self setLayout_bottom:[attribute lastObject]];
     _layout_top_bottom = layout_top_bottom;
 }
 
 - (void)setLayout_left_right:(NSString *)layout_left_right {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_left_right];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_left_right];
     [self setLayout_left:[attribute firstObject]];
     [self setLayout_right:[attribute lastObject]];
     _layout_left_right = layout_left_right;
@@ -295,7 +295,7 @@
 }
 
 - (void)setLayout_size:(NSString *)layout_size {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_size];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_size];
     [self setLayout_width:[attribute firstObject]];
     [self setLayout_height:[attribute lastObject]];
     _layout_size = layout_size;
@@ -418,7 +418,7 @@
 }
 
 - (void)setLayout_edge:(NSString *)layout_edge {
-    NSArray *attribute = [self parserParameterWithLayoutAttribute:layout_edge];
+    NSArray *attribute = [self parseParameterWithLayoutAttribute:layout_edge];
     [self setLayout_top:[attribute firstObject]];
     [self setLayout_left:[attribute objectAtIndex:1]];
     [self setLayout_bottom:[attribute objectAtIndex:2]];
