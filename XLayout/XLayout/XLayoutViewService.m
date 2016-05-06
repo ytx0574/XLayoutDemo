@@ -212,7 +212,7 @@ NSString *const XLAYOUT_COLLECTION_REUSABLE_VIEW_ID = @"XLAYOUT_COLLECTION_REUSA
         double arguments = [number doubleValue];
         [invocation setArgument:&arguments atIndex:2];
     }else if (strcmp(type, "B") == 0) {
-        BOOL arguments = [number boolValue];
+        BOOL arguments = [argumentsObject boolValue];
         [invocation setArgument:&arguments atIndex:2];
     }else if (strcmp(type, "*") == 0) {
         const char *arguments = [argumentsObject UTF8String];
