@@ -1,14 +1,14 @@
 //
-//  UIColor+XLayoutPrivate.m
+//  UIColor+XLayout.m
 //  XLayout
 //
 //  Created by B&W on 16/4/28.
 //  Copyright © 2016年 B&W. All rights reserved.
 //
 
-#import "UIColor+XLayoutPrivate.h"
+#import "UIColor+XLayout.h"
 
-@implementation UIColor (XLayoutPrivate)
+@implementation UIColor (XLayout)
 
 + (UIColor *)colorWithHexString:(NSString *)hexString {
     NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
@@ -41,10 +41,6 @@
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
-}
-
-+ (UIColor *)colorWithString:(NSString *)string {
-    return [self colorWithHexString:string];
 }
 
 @end

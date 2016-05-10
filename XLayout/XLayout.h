@@ -13,6 +13,7 @@
 #import "XLayoutViewService.h"
 
 #import "UIView+XLayout.h"
+#import "UIColor+XLayout.h"
 #import "UIButton+XLayout.h"
 #import "UITableView+XLayout.h"
 #import "UITableViewCell+XLayout.h"

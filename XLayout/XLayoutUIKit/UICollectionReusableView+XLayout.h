@@ -13,6 +13,7 @@
     self = [super initWithFrame:frame]; \
     if (self) { \
         [self loadViewFromXMLName:XML_NAME]; \
+        [self setup]; \
     } \
     return self; \
 } \
@@ -22,5 +23,7 @@
 
 @property (nonatomic, strong) XLayoutViewService *viewService;
 - (void)loadViewFromXMLName:(NSString *)name;
+
+- (void)setup;
 
 @end

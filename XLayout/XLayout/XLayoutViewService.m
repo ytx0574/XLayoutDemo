@@ -11,7 +11,7 @@
 #import "XLayoutBase.h"
 #import "UIView+XLayout.h"
 #import "UIView+XLayoutPrivate.h"
-#import "UIColor+XLayoutPrivate.h"
+#import "UIColor+XLayout.h"
 #import <objc/runtime.h>
 
 NSString *const XLAYOUT_CONTROLLER_VIEW_ID = @"XLAYOUT_CONTROLLER_VIEW_ID";
@@ -259,7 +259,7 @@ NSString *const XLAYOUT_COLLECTION_REUSABLE_VIEW_ID = @"XLAYOUT_COLLECTION_REUSA
     };
     
     if (type.location != NSNotFound && type.length != 0) {
-        UIColor *arguments = [UIColor colorWithString:getValue(type)];
+        UIColor *arguments = [UIColor colorWithHexString:getValue(type)];
         *output = arguments;
         return;
     }

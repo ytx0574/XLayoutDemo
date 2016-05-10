@@ -7,7 +7,7 @@
 //
 
 #import "UIView+XLayout.h"
-#import "UIColor+XLayoutPrivate.h"
+#import "UIColor+XLayout.h"
 #import "UIView+XLayoutPrivate.h"
 #import <objc/runtime.h>
 
@@ -29,7 +29,7 @@
         self.layer.borderWidth = [[component objectAtIndex:1] floatValue];
     }
     if (component.count == 3) {
-        self.layer.borderColor = [[UIColor colorWithString:[component lastObject]] CGColor];
+        self.layer.borderColor = [[UIColor colorWithHexString:[component lastObject]] CGColor];
     }
 }
 

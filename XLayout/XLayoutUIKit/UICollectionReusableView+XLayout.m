@@ -35,4 +35,8 @@
     [service activateLayout];
 }
 
+- (void)setup {
+    
+}
+
 @end
